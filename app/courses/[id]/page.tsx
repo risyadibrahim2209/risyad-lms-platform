@@ -48,15 +48,12 @@ export default function CourseDetailPage() {
                         </p>
 
                         <div className="mt-6 flex items-center justify-between">
-                            <button
-                                onClick={toggleComplete}
-                                className={`px-6 py-3 rounded-lg font-bold transition flex items-center gap-2 ${isCompleted
-                                    ? "bg-green-100 text-green-700 border border-green-200"
-                                    : "bg-blue-600 text-white hover:bg-blue-700"
-                                    }`}
+                            <Link
+                                href={`/courses/${params.id}/quiz`} // Link ke halaman kuis nested
+                                className="px-6 py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition flex items-center gap-2"
                             >
-                                {isCompleted ? "✅ Terpelajar" : "Tandai Selesai"}
-                            </button>
+                                ✍️ Kerjakan Kuis
+                            </Link>
                         </div>
                     </div>
                 </div>
