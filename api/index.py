@@ -1,7 +1,7 @@
 # backend/main.py
 from fastapi import FastAPI, Depends
 from sqlmodel import SQLModel, Field, Session, select
-from database import engine, create_db_and_tables, get_session
+from .database import engine, create_db_and_tables, get_session
 from fastapi.middleware.cors import CORSMiddleware
 from typing import List, Optional
 
